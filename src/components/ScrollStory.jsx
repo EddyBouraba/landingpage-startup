@@ -2,10 +2,14 @@ import { useState, useEffect, useRef } from 'react';
 import ChapterNav from './ChapterNav';
 import { RocketIcon, SparklesIcon, BoltIcon, DiamondIcon, TargetIcon, LockIcon, ZapIcon, LayersIcon, ChartIcon, UsersIcon, CodeIcon, TrendingUpIcon } from './Icons';
 import Hero from './Hero';
+import TrustSection from './TrustSection';
 import Features from './Features';
 import Benefits from './Benefits';
+import CustomerStories from './CustomerStories';
 import Testimonials from './Testimonials';
+import Team from './Team';
 import Pricing from './Pricing';
+import FloatingBadge from './FloatingBadge';
 
 const ScrollStory = () => {
   const [currentChapter, setCurrentChapter] = useState(0);
@@ -47,13 +51,14 @@ const ScrollStory = () => {
     <>
       <ChapterNav
         currentChapter={currentChapter}
-        totalChapters={5}
+        totalChapters={6}
         onNavigate={navigateToChapter}
       />
 
       <div className="scroll-smooth">
         <section ref={el => sectionsRef.current[0] = el}>
           <Hero />
+          <TrustSection />
         </section>
         <section ref={el => sectionsRef.current[1] = el}>
           <Features />
@@ -62,12 +67,18 @@ const ScrollStory = () => {
           <Benefits />
         </section>
         <section ref={el => sectionsRef.current[3] = el}>
-          <Testimonials />
+          <CustomerStories />
         </section>
         <section ref={el => sectionsRef.current[4] = el}>
+          <Testimonials />
+          <Team />
+        </section>
+        <section ref={el => sectionsRef.current[5] = el}>
           <Pricing />
         </section>
       </div>
+
+      <FloatingBadge />
     </>
   );
 };

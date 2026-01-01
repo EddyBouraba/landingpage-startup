@@ -9,11 +9,12 @@ const ChapterNav = ({ currentChapter, totalChapters, onNavigate }) => {
   }, [currentChapter, totalChapters]);
 
   const chapters = [
-    { id: 0, title: 'Welcome', Icon: RocketIcon, color: 'from-blue-500 to-cyan-500' },
-    { id: 1, title: 'Vision', Icon: SparklesIcon, color: 'from-purple-500 to-pink-500' },
-    { id: 2, title: 'Power', Icon: BoltIcon, color: 'from-yellow-500 to-orange-500' },
-    { id: 3, title: 'Impact', Icon: DiamondIcon, color: 'from-green-500 to-emerald-500' },
-    { id: 4, title: 'Join Us', Icon: TargetIcon, color: 'from-indigo-500 to-purple-500' },
+    { id: 0, title: 'Accueil', Icon: RocketIcon, color: 'from-blue-500 to-cyan-500' },
+    { id: 1, title: 'Fonctionnalités', Icon: BoltIcon, color: 'from-yellow-500 to-orange-500' },
+    { id: 2, title: 'Avantages', Icon: SparklesIcon, color: 'from-purple-500 to-pink-500' },
+    { id: 3, title: 'Histoires', Icon: DiamondIcon, color: 'from-green-500 to-emerald-500' },
+    { id: 4, title: 'Équipe', Icon: TargetIcon, color: 'from-pink-500 to-rose-500' },
+    { id: 5, title: 'Tarifs', Icon: TargetIcon, color: 'from-indigo-500 to-purple-500' },
   ];
 
   return (

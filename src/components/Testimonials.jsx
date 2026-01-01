@@ -7,34 +7,38 @@ const Testimonials = () => {
     {
       name: 'Sarah Johnson',
       role: 'CEO at TechVision',
-      avatar: '👩‍💼',
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=faces',
       content: 'StartupLab transformed how we work. We scaled from 5 to 50 employees in just 6 months without any infrastructure headaches.',
       rating: 5,
       company: 'TechVision',
+      location: 'San Francisco, CA'
     },
     {
       name: 'Michael Chen',
       role: 'CTO at DataFlow',
-      avatar: '👨‍💻',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=faces',
       content: 'The best investment we made for our startup. The automation features alone saved us countless hours every week.',
       rating: 5,
       company: 'DataFlow',
+      location: 'New York, NY'
     },
     {
       name: 'Emma Williams',
       role: 'Founder at GrowthHub',
-      avatar: '👩‍🚀',
+      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=faces',
       content: 'Incredible platform! The analytics and insights helped us make data-driven decisions that doubled our revenue.',
       rating: 5,
       company: 'GrowthHub',
+      location: 'Austin, TX'
     },
     {
       name: 'David Martinez',
       role: 'Product Manager at InnovateCo',
-      avatar: '👨‍🔬',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=faces',
       content: 'Game-changing solution for modern startups. The collaboration tools keep our remote team perfectly synchronized.',
       rating: 5,
       company: 'InnovateCo',
+      location: 'Seattle, WA'
     },
   ];
 
@@ -73,8 +77,12 @@ const Testimonials = () => {
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
               {/* Avatar */}
               <div className="flex-shrink-0">
-                <div className="w-24 h-24 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center text-5xl shadow-lg">
-                  {testimonials[currentIndex].avatar}
+                <div className="relative w-24 h-24 rounded-full overflow-hidden shadow-lg ring-4 ring-white">
+                  <img
+                    src={testimonials[currentIndex].avatar}
+                    alt={testimonials[currentIndex].name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
@@ -106,8 +114,18 @@ const Testimonials = () => {
                   <div className="text-gray-600">
                     {testimonials[currentIndex].role}
                   </div>
-                  <div className="text-sm text-gradient from-indigo-600 to-purple-600 font-semibold mt-1">
-                    {testimonials[currentIndex].company}
+                  <div className="flex items-center gap-2 mt-1 justify-center md:justify-start">
+                    <div className="text-sm text-gradient from-indigo-600 to-purple-600 font-semibold">
+                      {testimonials[currentIndex].company}
+                    </div>
+                    <span className="text-gray-400">•</span>
+                    <div className="text-sm text-gray-500 flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      {testimonials[currentIndex].location}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -170,8 +188,12 @@ const Testimonials = () => {
               </div>
               <p className="text-gray-600 mb-4 line-clamp-3">"{testimonial.content}"</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center text-2xl">
-                  {testimonial.avatar}
+                <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-white shadow">
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <div className="font-semibold text-sm">{testimonial.name}</div>

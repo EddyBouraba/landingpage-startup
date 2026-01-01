@@ -48,21 +48,21 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-slide-down">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Transform Your Ideas
+            Donnez Vie à Vos
             <br />
             <span className="text-gradient from-indigo-600 via-purple-600 to-pink-600">
-              Into Reality
+              Plus Grandes Idées
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
-            The ultimate platform for startups to build, scale, and succeed.
-            Join thousands of innovators already making an impact.
+            Nous croyons que derrière chaque grande entreprise, il y a des personnes passionnées.
+            Rejoignez des milliers d'entrepreneurs qui transforment leurs rêves en réalité.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button className="group px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-lg font-semibold rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
-              Start Free Trial
+              Commencer Gratuitement
               <svg
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                 fill="none"
@@ -83,22 +83,23 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              Watch Demo
+              Voir la Démo
             </button>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto animate-fade-in">
             {[
-              { number: '50K+', label: 'Active Users' },
-              { number: '200+', label: 'Countries' },
-              { number: '99.9%', label: 'Uptime' },
-              { number: '4.9/5', label: 'Rating' },
+              { number: '50K+', label: 'Entrepreneurs', emoji: '👥' },
+              { number: '200+', label: 'Pays', emoji: '🌍' },
+              { number: '99.9%', label: 'Disponibilité', emoji: '⚡' },
+              { number: '4.9/5', label: 'Satisfaction', emoji: '⭐' },
             ].map((stat, index) => (
               <div
                 key={index}
                 className="p-6 bg-white/50 backdrop-blur-sm rounded-2xl hover:bg-white/80 transition-all duration-300 hover:scale-105"
               >
+                <div className="text-2xl mb-1">{stat.emoji}</div>
                 <div className="text-3xl md:text-4xl font-bold text-gradient from-indigo-600 to-purple-600">
                   {stat.number}
                 </div>
